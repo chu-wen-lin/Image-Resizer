@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>return image</title>
+</head>
+<body>
+    <h1 style="text-align: center;"> Below is the resized image.</h1>
+    <div style="text-align: center"><img src="{{ image }}" alt="charles" class="center"></div>
+    <h2 style="text-align: center;"> length: {{ length }} pixels * width: {{ width }} pixels </h2>
+    <div style="text-align: center;"><form method="get" action="{{ url_for('index') }}"> <button type="submit" style="height:50px;width:200px;font-size:14pt;"> Back to Resize Image </button></form></div>
+</body>
+</html>
