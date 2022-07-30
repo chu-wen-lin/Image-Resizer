@@ -17,14 +17,12 @@ class TestResizer(unittest.TestCase):
 
     def test_resizer_status(self):  # verify request status
         response = self.client.post('/resizer',
-                           data=dict(length='256',
-                                     width='256'))
+                                    data=dict(length='256', width='256'))
         self.assertEqual(response.status_code, 200)
 
     def test_resize_width_and_height(self):  # mock post request
         response = self.client.post('/resizer',
-                           data=dict(length='256',
-                                     width='256'))
+                                    data=dict(length='256', width='256'))
 
         pat = re.compile(rb'<img [^>]*src="([^"]+)')
         img_url = pat.findall(response.data)
